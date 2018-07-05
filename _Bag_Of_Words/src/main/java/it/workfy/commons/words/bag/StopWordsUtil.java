@@ -7,16 +7,36 @@ import java.util.List;
  *
  * @author julio
  */
-public class StopWordsUtil {
+class StopWordsUtil {
 
     public static final List<String> STOP_WORDS = new ArrayList<>();
 
-    public static String removeStopWords( String text ) {
-        String newText = String.copyValueOf( text.toCharArray() );
-        for ( String word : STOP_WORDS ) {
-            newText = newText.replace( word , "" );
+    public static List<String> removeStopWords( String text ) {
+        if ( text == null ) {
+            return null;
         }
-        return newText;
+
+        List<String> newWords = new ArrayList<>();
+
+        for ( String word : text.toLowerCase().split( " " ) ) {
+
+            if ( word == null ) {
+                continue;
+            }
+
+            word = word.replace( "\"" , "" ).replace( "'" , "" );
+
+            if ( word.isEmpty() ) {
+                continue;
+            }
+
+            if ( STOP_WORDS.contains( word ) ) {
+                continue;
+            }
+            newWords.add( word );
+        }
+
+        return newWords;
     }
 
     static {
