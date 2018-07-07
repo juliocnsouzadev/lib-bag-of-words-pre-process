@@ -24,7 +24,15 @@ class StopWordsUtil {
                 continue;
             }
 
-            word = word.replace( "\"" , "" ).replace( "'" , "" );
+            word = word.replace( "\"" , "" )
+                    .replace( "'" , "" )
+                    .replace( "\\." , "" )
+                    .replace( "," , "" )
+                    .replace( ":" , "" )
+                    .replace( "*" , "" )
+                    .replace( "!" , "" )
+                    .replace( "?" , "" )
+                    .replace( ";" , "" );
 
             if ( word.isEmpty() ) {
                 continue;
