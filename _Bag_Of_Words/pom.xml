@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.workfy.commons.words.bag</groupId>
-    <artifactId>_Bag_Of_Words</artifactId>
+    <artifactId>LIB_BAG_OF_WORDS</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <dependencies>

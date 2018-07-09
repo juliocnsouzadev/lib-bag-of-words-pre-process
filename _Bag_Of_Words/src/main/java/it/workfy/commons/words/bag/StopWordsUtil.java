@@ -29,12 +29,21 @@ class StopWordsUtil {
                     .replace( "\\." , "" )
                     .replace( "," , "" )
                     .replace( ":" , "" )
-                    .replace( "*" , "" )
                     .replace( "!" , "" )
                     .replace( "?" , "" )
+                    .replace( "(" , "" )
+                    .replace( ")" , "" )
+                    .replace( "[" , "" )
+                    .replace( "]" , "" )
+                    .replace( "{" , "" )
+                    .replace( "}" , "" )
                     .replace( ";" , "" );
 
             if ( word.isEmpty() ) {
+                continue;
+            }
+
+            if ( word.length() < 3 ) {
                 continue;
             }
 

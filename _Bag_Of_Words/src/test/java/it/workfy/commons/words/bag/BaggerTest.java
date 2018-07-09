@@ -23,7 +23,6 @@ public class BaggerTest {
         bagOfWords.keySet().stream().forEach( word -> {
             Assert.assertFalse( StopWordsUtil.STOP_WORDS.contains( word ) );
             Assert.assertFalse( word.contains( Normalizer.DOT ) );
-            Assert.assertFalse( word.contains( Normalizer.COMMA ) );
 
             if ( word.contains( "\"" ) ) {
                 System.out.println( word.replace( "\"" , "-" ) );
