@@ -26,7 +26,7 @@ class StopWordsUtil {
 
             word = word.replace( "\"" , "" )
                     .replace( "'" , "" )
-                    .replace( "\\." , "" )
+                    .replace( "\\" , "" )
                     .replace( "," , "" )
                     .replace( ":" , "" )
                     .replace( "!" , "" )
@@ -38,6 +38,23 @@ class StopWordsUtil {
                     .replace( "{" , "" )
                     .replace( "}" , "" )
                     .replace( ";" , "" );
+
+            if ( word.matches( ".*\\d+.*" ) ) {
+                word = word.replace( "/" , "Bar" )
+                        .replace( "-" , "Trace" )
+                        .replace( "_" , "Undertrace" )
+                        .replace( "." , "Point" )
+                        .replace( "0" , "Zero" )
+                        .replace( "1" , "Um" )
+                        .replace( "2" , "Dois" )
+                        .replace( "3" , "Tres" )
+                        .replace( "4" , "Quatro" )
+                        .replace( "5" , "Cinco" )
+                        .replace( "6" , "Seis" )
+                        .replace( "7" , "Sete" )
+                        .replace( "8" , "Oito" )
+                        .replace( "9" , "Nove" );
+            }
 
             if ( word.isEmpty() ) {
                 continue;

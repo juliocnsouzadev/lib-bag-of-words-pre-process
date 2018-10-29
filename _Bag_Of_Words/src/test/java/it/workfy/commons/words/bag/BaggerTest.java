@@ -18,7 +18,7 @@ public class BaggerTest {
         final Bagger bagger = new Bagger();
         final Map<String , Integer> bagOfWords = bagger.getBagOfWords( sample() );
 
-        System.out.println( bagOfWords );
+        bagOfWords.keySet().forEach( key -> System.out.println( key + " : " + bagOfWords.get( key ) ) );
 
         bagOfWords.keySet().stream().forEach( word -> {
             Assert.assertFalse( StopWordsUtil.STOP_WORDS.contains( word ) );
@@ -42,6 +42,6 @@ public class BaggerTest {
                 + " Ministério da Educação."
                 + "“Aqui ninguém implica com ninguém. A gente respeita as diferenças e até rimos delas. Acho que isso "
                 + "é reflexo da educação que recebemos nas escolas e em casa desde muito 'cedo', diz Faye, de 14 anos, "
-                + "aluna de uma escola secundária em Amsterdã.";
+                + "aluna de uma escola secundária em Amsterdã. 01/02/2018 120.125.00-00";
     }
 }
