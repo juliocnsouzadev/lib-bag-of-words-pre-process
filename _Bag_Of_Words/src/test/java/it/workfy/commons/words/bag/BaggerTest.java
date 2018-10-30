@@ -42,6 +42,6 @@ public class BaggerTest {
                 + " Ministério da Educação."
                 + "“Aqui ninguém implica com ninguém. A gente respeita as diferenças e até rimos delas. Acho que isso "
                 + "é reflexo da educação que recebemos nas escolas e em casa desde muito 'cedo', diz Faye, de 14 anos, "
-                + "aluna de uma escola secundária em Amsterdã. 01/02/2018 120.125.00-00";
+                + "aluna de uma escola secundária em Amsterdã. 01/02/2018 120.125.00-00 88 ";
     }
 }
