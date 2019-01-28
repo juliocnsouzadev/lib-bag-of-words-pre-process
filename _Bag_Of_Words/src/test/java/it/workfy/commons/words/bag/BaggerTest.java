@@ -32,7 +32,7 @@ public class BaggerTest {
     }
 
     private String sample() {
-        return "A Holanda tem uma forte política anti-bullying: desde 2015 as escolas primárias e secundárias são "
+        return "A Holanda tem uma forte política anti-bullying: desde 2015 as  escolas primárias e secundárias são "
                 + "obrigadas por lei a combater os casos de bullying."
                 + "Nas escolas primárias, crianças são ensinadas desde os 4 anos a fazerem um sinal de \"pare\" com "
                 + "as mãos quando não gostam de uma situação ou quando acham que algum colega ultrapassou algum limite."
