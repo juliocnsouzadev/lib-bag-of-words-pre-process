@@ -13,8 +13,7 @@ public class Bagger {
     public Map<String , Integer> getBagOfWords( final String text ) {
         final Map<String , Integer> bag = new HashMap<>();
 
-        final String normalizedText = Normalizer.normailze( text );
-        final List<String> words = StopWordsUtil.removeStopWords( normalizedText );
+        List<String> words = getNormalizedWords( text );
 
         words.stream().forEach( word -> {
             Integer times = bag.get( word );
@@ -28,6 +27,12 @@ public class Bagger {
         } );
 
         return bag;
+    }
+
+    public List<String> getNormalizedWords( final String text ) {
+        final String normalizedText = Normalizer.normailze( text );
+        final List<String> words = StopWordsUtil.removeStopWords( normalizedText );
+        return words;
     }
 
 }
