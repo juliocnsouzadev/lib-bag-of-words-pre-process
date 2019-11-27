@@ -12,6 +12,9 @@ public class Bagger {
 
     public Map<String , Integer> getBagOfWords( final String text ) {
         final Map<String , Integer> bag = new HashMap<>();
+        if ( text == null ) {
+            return bag;
+        }
 
         List<String> words = getNormalizedWords( text );
 

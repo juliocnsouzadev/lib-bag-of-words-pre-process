@@ -7,6 +7,9 @@ package it.workfy.commons.words.bag;
 class Normalizer {
 
     public static String normailze( String text ) {
+        if ( text == null ) {
+            return "";
+        }
         String newText = String.valueOf( text.toLowerCase() );
         newText = newText.replaceAll( "/[^\\w]/" , " " );
         newText = newText.replace( DOT , " " );
